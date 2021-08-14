@@ -1,0 +1,2 @@
+rootProject.name = "RecursosNativos"
+include ':app'

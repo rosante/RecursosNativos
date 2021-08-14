@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_calendar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Evento"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_maps"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_maps"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Mapa"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/tv_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_set_event"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Criar Evento"
+        android:src="@drawable/ic_event"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toStartOf="@id/img_maps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_calendar"
+        />
+
+    <ImageView
+        android:id="@+id/img_maps"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Criar Evento"
+        android:src="@drawable/ic_maps"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/img_set_event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_maps"
+        />
+
+    <TextView
+        android:id="@+id/tv_photo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Fotos"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_camera"
+        app:layout_constraintTop_toBottomOf="@id/img_set_event"/>
+
+    <ImageView
+        android:id="@+id/img_photos"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/standard_image"
+        android:contentDescription="Fotos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_camera"
+        app:layout_constraintTop_toBottomOf="@id/tv_photo"/>
+
+    <TextView
+        android:id="@+id/tv_camera"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/tv_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_maps"/>
+
+    <ImageView
+        android:id="@+id/img_camera"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_camera"
+        android:contentDescription="Camera"
+        app:layout_constraintStart_toEndOf="@id/img_photos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_camera"/>
+
+
+    <TextView
+        android:id="@+id/tv_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contatos"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_camera"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:text="Criar Contato"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_contacts"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
